@@ -2,7 +2,6 @@
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
-
 Console.WriteLine("Введите число. Положительное или отрицательное");
 int x = Convert.ToInt32(Console.ReadLine());
 if (x > -100 && x < 100) Console.WriteLine("Третьей цифры нет");
@@ -20,6 +19,7 @@ else if (x >= 100)
     {
         x = x-10;
     }
+    Console.WriteLine($"Вот ваша третья цифра: {x}");
 }
 else
 {
@@ -36,5 +36,5 @@ else
         x = x+10;
     }
     x = x * -1;
+    Console.WriteLine($"Вот ваша третья цифра: {x}");
 }
-Console.WriteLine($"Вот ваша третья цифра: {x}");
