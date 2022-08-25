@@ -5,15 +5,10 @@
 
 Console.WriteLine("Введите трёхзначное число");
 int x = Convert.ToInt32(Console.ReadLine());
-
-while (x > 99)
+while (x < 100 | x > 999)
 {
-x = x - 100;
+    Console.WriteLine("Введено не трехзначное число. Введите трёхзначное число");
+    x = Convert.ToInt32(Console.ReadLine());
 }
-
-while (x > 9)
-{
-x = x / 10;
-}
-
-Console.WriteLine($"{x}");
+int secondDigit = x/10%10;
+Console.WriteLine($"{secondDigit}");
