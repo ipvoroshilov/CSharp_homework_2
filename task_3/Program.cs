@@ -4,14 +4,16 @@
 // 7 -> да
 // 1 -> нет
 
-
 Console.WriteLine("Является ли этот день выходным? Введите цифру дня недели");
 int x = Convert.ToInt32(Console.ReadLine());
-if (x < 1 | x > 7) 
+
+while (x < 1 | x > 7) 
 {
-    Console.WriteLine("Для тех, кто в танке: число должно быть от 1 до 7");
+    Console.WriteLine("Для тех, кто в танке: число должно быть от 1 до 7. Введите цифру дня недели");
+    x = Convert.ToInt32(Console.ReadLine());
 }
-else if (x == 6 | x == 7)
+
+if (x == 6 | x == 7)
 {
     Console.WriteLine("Да, это выходной день");
 }
